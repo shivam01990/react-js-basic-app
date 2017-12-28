@@ -1,6 +1,6 @@
 import React from "react";
-
-
+import Header from "./header"
+import Footer from "./footer"
 
 export default class Layout extends React.Component {
   constructor() {
@@ -15,7 +15,9 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
-        {this.state.title}
+    <Header/>
+   {this.props.children}
+    <Footer/>        
       </div>
     );
   }
